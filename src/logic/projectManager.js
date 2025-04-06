@@ -3,8 +3,7 @@ import { project } from "./project";
 import { nav } from '../components/nav/nav';
 import { updateData } from "./localStorage";
 
-const main = new project('default'); 
-let projectList = [main];
+let projectList = [];
 
 if (localStorage.getItem('projectList') !== null) {
     projectList = JSON.parse(localStorage.getItem('projectList'));

@@ -35,9 +35,7 @@ class render {
             })
         })
         
-        console.log('mastertasklist', this.masterTaskList);
         this.targetList = this.masterTaskList.filter(task => task.dueDate.getDay() === new Date().getDay());
-        console.log('target list', this.targetList)
 
         this.targetList.forEach(task => {
             new TaskEl(task).render(content);
@@ -86,15 +84,13 @@ function clearContent() {
                     let dueVal = el.querySelector('#new-task-due').value;
                     let projectVal = el.querySelector('#new-task-prj').value;
 
-                    console.log(dueVal);
-
                     if (textVal.trim() !== ''  && dueVal !== '') {
                         let targetProject = projectList.find(prj => prj.name === projectVal);
                         let createdTask = new task({
                             name: textVal,
                             dueDate: dueVal,
                         })
-                        console.log(targetProject);
+
                         addTaskToProject(targetProject, createdTask);
                         updateData();
                         render.reRender(targetProject);
