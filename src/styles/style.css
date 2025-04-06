@@ -1,0 +1,134 @@
+:root {
+    --c-main: #16FD17;
+    --c-sec: #051f05;
+    --c-bg1: hsla(120, 59%, 14%, 0.5);
+    --c-bg2: hsla(120, 80%, 10%, 0.479);
+    --c-main-dark: #161616;
+    --c-green-dark: hsla(131, 73%, 4%, 0.9);
+    --c-main-light: #d0d0d0;
+}
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+
+    z-index: -3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 8px;
+    background: red;
+}
+
+::-webkit-scrollbar-track {
+    width: 4px;
+    background-color: var(--c-sec);
+    z-index: -3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--c-main);
+}
+
+/* SCROLL BAR */
+
+body {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 3fr;
+    column-gap: 24px;
+
+    height: 100vh; width: 100vw;
+    padding: 40px;
+
+    background-color: var(--c-main-dark);
+
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+/* FALLOUT BORDER STYLES */
+
+.fallout-border {
+    background-color: var(--c-bg1);
+    clip-path: fill-box;
+    position: relative;
+    isolation: isolate;
+
+    animation: fallout-background 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.fallout-border::before,
+.fallout-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.fallout-border::before {
+    background: var(--c-main);
+
+    clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 14px, 
+        calc(100% - 5px) 14px,
+        calc(100% - 5px) 5px,
+        5px 5px,
+        5px 14px,
+        0% 14px
+    )
+}
+
+.fallout-border::after {
+    background: var(--c-main);
+
+    clip-path: polygon(
+        0% 100%,
+        100% 100%,
+        100% calc(100% - 14px),
+        calc(100% - 5px) calc(100% - 14px),
+        calc(100% - 5px) calc(100% - 5px),
+        5px calc(100% - 5px),
+        5px calc(100% - 14px),
+        0% calc(100% - 14px)
+    );
+}
+
+@keyframes fallout-background {
+    50% { background-color: var(--c-bg2);}
+    100% { background-color: var(--c-bg1);}
+}
+
+aside, section {
+    max-height: 90vh;
+}
+
+/* SIDEBAR STYLES */
+
+
+
+/* nav span {
+    height: 40px;
+    font-weight: 900;
+    font-size: 20px;
+
+    text-align: start;
+    text-transform: uppercase;
+    margin-top: 24px;
+
+    color: var(--c-main);
+
+    border-bottom: 2px var(--c-main) solid;
+} */
+
+/* SECTION STYLE */ 
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 40px 24px;
+}

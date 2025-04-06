@@ -1,0 +1,27 @@
+.new-task {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 40px;
+    padding: 8px;
+
+    border: 1px var(--c-main) solid;
+
+    & input, select {
+        background-color: var(--c-main);
+        padding: 4px 8px;
+        font-weight: 600;
+        min-width: 16%;
+        width: fit-content;
+        text-align: center;
+        border: none;
+    }
+
+    & input:focus, select:focus {
+        outline: none;
+    }
+
+    & input[type=text] {
+        width: 100%;
+    }
+}

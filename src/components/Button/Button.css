@@ -1,0 +1,31 @@
+.button {
+    height: 40px;
+    font-weight: 900;
+    font-size: 20px;
+
+    text-align: start;
+    text-transform: uppercase;
+
+    background: none;
+    border: none;
+
+    color: var(--c-main);
+
+    &:hover {
+        color: var(--c-main-dark);
+
+        background-color: var(--c-main);
+        box-shadow: 6px 6px;
+        cursor: pointer;
+    }
+}
+/* 
+.btn:focus,
+.btn:active {
+    color: var(--c-main-dark);
+    border: none;
+    outline: none;
+
+    background-color: var(--c-sec);
+    box-shadow: 4px 4px;
+} */

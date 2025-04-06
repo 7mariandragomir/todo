@@ -1,0 +1,12 @@
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    max-height: 90%; width: 100%;
+    padding: 40px 24px;
+    
+    overflow: auto;
+
+    margin-top: 24px;
+}

@@ -1,0 +1,40 @@
+.navitem {
+    height: 40px;
+    font-weight: 900;
+    font-size: 20px;
+
+    text-align: start;
+    text-transform: uppercase;
+
+    background: none;
+    padding: 4px 8px;
+
+    color: var(--c-main);
+
+    user-select: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    &.hasborder {
+        border: 1px var(--c-main) solid;    
+    }
+
+    & .button {
+        height: 28px;
+        aspect-ratio: 1 / 1;
+        text-align: center;
+        font-size: 24px;
+        line-height: 16px;
+    }
+
+    &.hashover {
+        cursor: pointer;
+    }
+
+    &.hashover:hover > span {
+        background-color: var(--c-main);
+        color: var(--c-sec);
+        box-shadow: 6px 6px;
+    }
+}
