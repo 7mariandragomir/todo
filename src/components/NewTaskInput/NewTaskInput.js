@@ -1,7 +1,7 @@
 export { NewTaskInput };
 import './NewTaskInput.css';
 import { Button } from "../Button/Button";
-import { projectList } from '../../logic/projectManager';
+import { projectList, addNewProject } from '../../logic/projectManager';
 
 class NewTaskInput {
     constructor({addFunction, cancelFunction}) {
@@ -21,6 +21,13 @@ class NewTaskInput {
 
         this.project = document.createElement('select');
         this.project.setAttribute('id', 'new-task-prj');
+
+        // if no projects, ask user to create one
+        if (projectList.length === 0) {
+            alert('please create a project first.');
+            addNewProject();
+        };
+        
         projectList.forEach(project => {
             this.opt = document.createElement('option');
             this.opt.innerHTML = project.name;
