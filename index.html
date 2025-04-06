@@ -1,1 +1,49 @@
-<head><script defer src="main.js"></script></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutDo - Desktop</title>
+<script defer src="main.js"></script></head>
+<body>
+    <aside class="fallout-border">
+        <nav id="nav">
+            <!-- <span>Home <span class="add-more"> </span></span>
+            <button>Today</button>
+            <button>Today</button>
+            <button>Today</button>
+            <span>Projects <span class="add-more"> </span></span>
+            <button>ADD Project...</button>
+            <button>1: Project Name</button> -->
+
+        </nav>
+    </aside>
+    <section class="fallout-border">
+        <div id="task-list">
+            <!-- <button>Add new Task...</button> -->
+        </div>
+    </section>
+
+    <dialog class="modal" id="modal">
+        <h2>add a new task</h1>
+        <form>
+            <div class="form-item">
+                <label for="input-task">Task</label>
+                <input required type="textarea" name="task" id="input-task">
+            </div>
+            <div class="form-item">
+                <label for="input-due">Due Date</label>
+                <input required type="date" name="due" id="input-due">
+            </div>
+            <div class="form-item">
+                <label for="input-project">Project</label>
+                <select name="projects" id="select-project"></select>
+            </div>
+            <div class="buttons" id="btn-container">
+                <button class="btn" id="new-task-add">Add</button>
+                <button class="btn" id="new-task-cancel">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>
