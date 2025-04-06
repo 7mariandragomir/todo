@@ -1,8 +1,7 @@
 export { projectList, addNewProject, removeProject, removeTaskFromProject };
 import { project } from "./project";
 import { nav } from '../components/nav/nav';
-import { task } from "./task";
-import { updateData, storedProjectList } from "./localStorage";
+import { updateData } from "./localStorage";
 
 const main = new project('default'); 
 let projectList = [main];
@@ -12,9 +11,6 @@ if (localStorage.getItem('projectList') !== null) {
 
     projectList = projectList.map(prj => new project(prj));
     console.log(projectList);
-    // projectList.forEach(prj => {
-    //     prj.taskList.forEach(tsk => new task())
-    // })
 }
 
 

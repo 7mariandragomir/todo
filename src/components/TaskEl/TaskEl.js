@@ -1,9 +1,7 @@
 export { TaskEl };
 import './TaskEl.css';
-import { datte } from '../../logic/date-utils';
 import { Button } from '../Button/Button';
 import { removeTaskFromProject } from '../../logic/projectManager';
-import { render } from '../../logic/render';
 
 class TaskEl {
     constructor(task) {
